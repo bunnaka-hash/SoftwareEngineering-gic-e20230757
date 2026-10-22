@@ -33,5 +33,5 @@ Features include:
 ## Author
 
 **Bunnaka**  
-Software Engineering / GIC  
+Genie Informatique et Communication / GIC  
 Institute of Technology of Cambodia (ITC)
