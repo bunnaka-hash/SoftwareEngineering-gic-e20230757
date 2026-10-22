@@ -26,6 +26,7 @@ lab01-multithreading/
 │   │           ├── task2/
 │   │           ├── task3/
 │   │           ├── task4/
+│   │           ├── task5/
 │   │           └── challenge/
 │   └── test/
 ├── README.md
