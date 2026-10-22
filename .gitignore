@@ -1,0 +1,34 @@
+# Maven build output
+target/
+
+# Generated large dataset
+data/
+
+# Word count output
+result.csv
+
+# Java compiled files
+*.class
+
+# IDE settings
+.vscode/
+.idea/
+*.iml
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
