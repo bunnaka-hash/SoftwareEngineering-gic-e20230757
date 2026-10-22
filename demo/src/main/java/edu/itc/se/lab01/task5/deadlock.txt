@@ -1,0 +1,375 @@
+2026-10-22 19:11:55
+Full thread dump OpenJDK 64-Bit Server VM (25.0.4.1+1-LTS mixed mode):
+
+Threads class SMR info:
+_java_thread_list=0x00007f9bd3389f20, length=26, elements={
+0x00007f9bce00c800, 0x00007f9bce082200, 0x00007f9bce084c00, 0x00007f9bce085400,
+0x00007f9bce85a600, 0x00007f9bd000e200, 0x00007f9bd000ea00, 0x00007f9bce862e00,
+0x00007f9bd2808200, 0x00007f9bd000f400, 0x00007f9bce503a00, 0x00007f9bcefc0800,
+0x00007f9bcef82200, 0x00007f9bcefc1000, 0x00007f9bcef82a00, 0x00007f9bd0509600,
+0x00007f9bd06ede00, 0x00007f9bce61fe00, 0x00007f9bcefbc200, 0x00007f9bcefc8c00,
+0x00007f9bd18c9400, 0x00007f9bce620600, 0x00007f9bd18c9c00, 0x00007f9bcefd1800,
+0x00007f9bcefd2000, 0x00007f9bcefb6a00
+}
+
+"main" #3 [10243] prio=5 os_prio=31 cpu=1765.46ms elapsed=409.48s tid=0x00007f9bce00c800 nid=10243 in Object.wait()  [0x00007000031a2000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.4.1/Native Method)
+	- waiting on <0x00000007825002e8> (a java.lang.Thread)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:389)
+	at java.lang.Thread.join(java.base@25.0.4.1/Thread.java:1887)
+	- locked <0x00000007825002e8> (a java.lang.Thread)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.joinThread(AbstractExecJavaBase.java:679)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.joinNonDaemonThreads(AbstractExecJavaBase.java:671)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.execute(AbstractExecJavaBase.java:331)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:127)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:336)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:324)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:220)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:181)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:79)
+	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:169)
+	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:166)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:106)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:74)
+	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:121)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:267)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:179)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:1017)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:299)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:219)
+	at java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(java.base@25.0.4.1/DirectMethodHandle$Holder)
+	at java.lang.invoke.LambdaForm$MH/0x0000000142089000.invoke(java.base@25.0.4.1/LambdaForm$MH)
+	at java.lang.invoke.LambdaForm$MH/0x0000000142089400.invokeExact_MT(java.base@25.0.4.1/LambdaForm$MH)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(java.base@25.0.4.1/DirectMethodHandleAccessor.java:156)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(java.base@25.0.4.1/DirectMethodHandleAccessor.java:104)
+	at java.lang.reflect.Method.invoke(java.base@25.0.4.1/Method.java:565)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:255)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:201)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:362)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:314)
+
+"Reference Handler" #11 [29443] daemon prio=10 os_prio=31 cpu=0.76ms elapsed=409.44s tid=0x00007f9bce082200 nid=29443 waiting on condition  [0x0000700003ac1000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@25.0.4.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@25.0.4.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@25.0.4.1/Reference.java:208)
+
+"Finalizer" #12 [29187] daemon prio=8 os_prio=31 cpu=0.11ms elapsed=409.44s tid=0x00007f9bce084c00 nid=29187 in Object.wait()  [0x0000700003bc4000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.4.1/Native Method)
+	- waiting on <0x0000000780001098> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:389)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:351)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@25.0.4.1/ReferenceQueue.java:137)
+	at java.lang.ref.ReferenceQueue.remove(java.base@25.0.4.1/ReferenceQueue.java:215)
+	- locked <0x0000000780001098> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@25.0.4.1/Finalizer.java:165)
+
+"Signal Dispatcher" #13 [28675] daemon prio=9 os_prio=31 cpu=0.39ms elapsed=409.44s tid=0x00007f9bce085400 nid=28675 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #14 [25091] daemon prio=9 os_prio=31 cpu=14.98ms elapsed=409.44s tid=0x00007f9bce85a600 nid=25091 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #15 [28163] daemon prio=9 os_prio=31 cpu=55.46ms elapsed=409.44s tid=0x00007f9bd000e200 nid=28163 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #16 [27651] daemon prio=9 os_prio=31 cpu=964.38ms elapsed=409.44s tid=0x00007f9bd000ea00 nid=27651 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #19 [27395] daemon prio=9 os_prio=31 cpu=1006.87ms elapsed=409.44s tid=0x00007f9bce862e00 nid=27395 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #20 [26883] daemon prio=9 os_prio=31 cpu=0.07ms elapsed=409.42s tid=0x00007f9bd2808200 nid=26883 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #21 [26627] daemon prio=8 os_prio=31 cpu=1.14ms elapsed=409.42s tid=0x00007f9bd000f400 nid=26627 in Object.wait()  [0x00007000042d9000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.4.1/Native Method)
+	- waiting on <0x0000000780000ac0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:389)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@25.0.4.1/ReferenceQueue.java:123)
+	at java.lang.ref.ReferenceQueue.remove(java.base@25.0.4.1/ReferenceQueue.java:201)
+	- locked <0x0000000780000ac0> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@25.0.4.1/CleanerImpl.java:146)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+	at jdk.internal.misc.InnocuousThread.run(java.base@25.0.4.1/InnocuousThread.java:148)
+
+"Thread-1" #36 [35331] daemon prio=5 os_prio=31 cpu=0.39ms elapsed=407.08s tid=0x00007f9bce503a00 nid=35331 waiting on condition  [0x0000700004e21000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	- parking to wait for  <0x000000078089dce0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@25.0.4.1/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@25.0.4.1/ForkJoinPool.java:4364)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@25.0.4.1/ForkJoinPool.java:4310)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:1752)
+	at java.util.concurrent.ArrayBlockingQueue.take(java.base@25.0.4.1/ArrayBlockingQueue.java:421)
+	at org.apache.maven.cli.transfer.SimplexTransferListener.feedConsumer(SimplexTransferListener.java:94)
+	at org.apache.maven.cli.transfer.SimplexTransferListener$$Lambda/0x0000000142304730.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"BfDependencyCollector-0-0" #37 [40195] daemon prio=5 os_prio=31 cpu=35.00ms elapsed=406.59s tid=0x00007f9bcefc0800 nid=40195 waiting on condition  [0x0000700004f24000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	- parking to wait for  <0x000000078252ef38> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@25.0.4.1/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@25.0.4.1/ForkJoinPool.java:4364)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@25.0.4.1/ForkJoinPool.java:4310)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:1752)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@25.0.4.1/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@25.0.4.1/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"BfDependencyCollector-0-1" #38 [39683] daemon prio=5 os_prio=31 cpu=18.59ms elapsed=406.58s tid=0x00007f9bcef82200 nid=39683 waiting on condition  [0x0000700005027000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	- parking to wait for  <0x000000078252ef38> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@25.0.4.1/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@25.0.4.1/ForkJoinPool.java:4364)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@25.0.4.1/ForkJoinPool.java:4310)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:1752)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@25.0.4.1/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@25.0.4.1/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"BfDependencyCollector-0-2" #39 [39427] daemon prio=5 os_prio=31 cpu=21.62ms elapsed=406.58s tid=0x00007f9bcefc1000 nid=39427 waiting on condition  [0x000070000512a000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	- parking to wait for  <0x000000078252ef38> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@25.0.4.1/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@25.0.4.1/ForkJoinPool.java:4364)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@25.0.4.1/ForkJoinPool.java:4310)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:1752)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@25.0.4.1/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@25.0.4.1/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"BfDependencyCollector-0-3" #40 [35843] daemon prio=5 os_prio=31 cpu=23.02ms elapsed=406.58s tid=0x00007f9bcef82a00 nid=35843 waiting on condition  [0x000070000522d000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	- parking to wait for  <0x000000078252ef38> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@25.0.4.1/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@25.0.4.1/ForkJoinPool.java:4364)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@25.0.4.1/ForkJoinPool.java:4310)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:1752)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@25.0.4.1/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@25.0.4.1/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"BfDependencyCollector-0-4" #41 [36355] daemon prio=5 os_prio=31 cpu=24.56ms elapsed=406.58s tid=0x00007f9bd0509600 nid=36355 waiting on condition  [0x0000700005330000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	- parking to wait for  <0x000000078252ef38> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@25.0.4.1/LockSupport.java:369)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:520)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@25.0.4.1/ForkJoinPool.java:4364)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@25.0.4.1/ForkJoinPool.java:4310)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@25.0.4.1/AbstractQueuedSynchronizer.java:1752)
+	at java.util.concurrent.LinkedBlockingQueue.take(java.base@25.0.4.1/LinkedBlockingQueue.java:435)
+	at java.util.concurrent.ThreadPoolExecutor.getTask(java.base@25.0.4.1/ThreadPoolExecutor.java:1016)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1076)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"edu.itc.se.lab01.task5.Bank.main()" #49 [44035] prio=5 os_prio=31 cpu=4.41ms elapsed=406.42s tid=0x00007f9bd06ede00 nid=44035 in Object.wait()  [0x0000700005b48000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.4.1/Native Method)
+	- waiting on <0x0000000787fa3e68> (a java.lang.Thread)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:389)
+	at java.lang.Thread.join(java.base@25.0.4.1/Thread.java:1887)
+	- locked <0x0000000787fa3e68> (a java.lang.Thread)
+	at java.lang.Thread.join(java.base@25.0.4.1/Thread.java:1963)
+	at edu.itc.se.lab01.task5.Bank.main(Bank.java:112)
+	at java.lang.invoke.LambdaForm$DMH/0x0000000142098000.invokeStatic(java.base@25.0.4.1/LambdaForm$DMH)
+	at java.lang.invoke.LambdaForm$MH/0x0000000142389000.invoke(java.base@25.0.4.1/LambdaForm$MH)
+	at java.lang.invoke.Invokers$Holder.invokeExact_MT(java.base@25.0.4.1/Invokers$Holder)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invokeImpl(java.base@25.0.4.1/DirectMethodHandleAccessor.java:155)
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(java.base@25.0.4.1/DirectMethodHandleAccessor.java:104)
+	at java.lang.reflect.Method.invoke(java.base@25.0.4.1/Method.java:565)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase$$Lambda/0x0000000142363d20.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"transfer-0" #51 [45059] prio=5 os_prio=31 cpu=0.43ms elapsed=406.41s tid=0x00007f9bce61fe00 nid=45059 waiting for monitor entry  [0x0000700005d4e000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:34)
+	- waiting to lock <0x0000000787f9ce00> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"transfer-1" #52 [45315] prio=5 os_prio=31 cpu=0.36ms elapsed=406.41s tid=0x00007f9bcefbc200 nid=45315 waiting for monitor entry  [0x0000700005e51000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:35)
+	- waiting to lock <0x0000000787f9ce30> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x0000000787f9ce00> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"transfer-2" #53 [45571] prio=5 os_prio=31 cpu=0.28ms elapsed=406.41s tid=0x00007f9bcefc8c00 nid=45571 waiting for monitor entry  [0x0000700005f54000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:35)
+	- waiting to lock <0x0000000787f9ce00> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x0000000787f9ce30> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"transfer-3" #54 [46083] prio=5 os_prio=31 cpu=0.19ms elapsed=406.41s tid=0x00007f9bd18c9400 nid=46083 waiting for monitor entry  [0x0000700006057000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:34)
+	- waiting to lock <0x0000000787f9ce30> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"transfer-4" #55 [46339] prio=5 os_prio=31 cpu=0.11ms elapsed=406.41s tid=0x00007f9bce620600 nid=46339 waiting for monitor entry  [0x000070000615a000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:35)
+	- waiting to lock <0x0000000787f9ce30> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x0000000787f9ce18> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"transfer-5" #56 [63747] prio=5 os_prio=31 cpu=0.17ms elapsed=406.41s tid=0x00007f9bd18c9c00 nid=63747 waiting for monitor entry  [0x000070000625d000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:34)
+	- waiting to lock <0x0000000787f9ce30> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"transfer-6" #57 [63491] prio=5 os_prio=31 cpu=0.12ms elapsed=406.42s tid=0x00007f9bcefd1800 nid=63491 waiting for monitor entry  [0x0000700006360000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:34)
+	- waiting to lock <0x0000000787f9ce00> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"transfer-7" #58 [47107] prio=5 os_prio=31 cpu=0.13ms elapsed=406.42s tid=0x00007f9bcefd2000 nid=47107 waiting for monitor entry  [0x0000700006463000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:34)
+	- waiting to lock <0x0000000787f9ce18> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"Attach Listener" #59 [38919] daemon prio=9 os_prio=31 cpu=1.28ms elapsed=0.13s tid=0x00007f9bcefb6a00 nid=38919 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"G1 Conc#1" os_prio=31 cpu=3.41ms elapsed=407.57s tid=0x00007f9bcd1d6400 nid=40963 runnable  
+
+"GC Thread#7" os_prio=31 cpu=0.77ms elapsed=407.66s tid=0x00007f9bcedd4e00 nid=41219 runnable  
+
+"GC Thread#6" os_prio=31 cpu=0.84ms elapsed=407.66s tid=0x00007f9bd04fc200 nid=34563 runnable  
+
+"GC Thread#5" os_prio=31 cpu=18.71ms elapsed=407.66s tid=0x00007f9bcedd4800 nid=34307 runnable  
+
+"GC Thread#4" os_prio=31 cpu=8.06ms elapsed=407.66s tid=0x00007f9bcedd4200 nid=41987 runnable  
+
+"GC Thread#3" os_prio=31 cpu=9.03ms elapsed=407.66s tid=0x00007f9bd04fbc00 nid=33795 runnable  
+
+"GC Thread#2" os_prio=31 cpu=14.84ms elapsed=407.67s tid=0x00007f9bcd1d6c00 nid=42499 runnable  
+
+"GC Thread#1" os_prio=31 cpu=13.19ms elapsed=407.67s tid=0x00007f9bcd39c600 nid=26375 runnable  
+
+"VM Thread" os_prio=31 cpu=9.28ms elapsed=409.47s tid=0x00007f9bce060200 nid=19459 runnable  
+
+"VM Periodic Task Thread" os_prio=31 cpu=3.80ms elapsed=409.48s tid=0x00007f9bcfd057b0 nid=20739 waiting on condition  
+
+"G1 Service" os_prio=31 cpu=26.95ms elapsed=409.48s tid=0x00007f9bd0008200 nid=16643 runnable  
+
+"G1 Refine#0" os_prio=31 cpu=588.99ms elapsed=409.48s tid=0x00007f9bce853000 nid=21251 runnable  
+
+"G1 Conc#0" os_prio=31 cpu=3.46ms elapsed=409.48s tid=0x00007f9bce822a00 nid=16387 runnable  
+
+"G1 Main Marker" os_prio=31 cpu=0.25ms elapsed=409.48s tid=0x00007f9bce822400 nid=12547 runnable  
+
+"GC Thread#0" os_prio=31 cpu=16.93ms elapsed=409.48s tid=0x00007f9bce036600 nid=13827 runnable  
+
+JNI global refs: 9, weak refs: 0
+
+
+Found one Java-level deadlock:
+=============================
+"transfer-0":
+  waiting to lock monitor 0x00007f9bd31705d0 (object 0x0000000787f9ce00, a edu.itc.se.lab01.task5.Bank$Account),
+  which is held by "transfer-1"
+
+"transfer-1":
+  waiting to lock monitor 0x00007f9bd3256700 (object 0x0000000787f9ce30, a edu.itc.se.lab01.task5.Bank$Account),
+  which is held by "transfer-2"
+
+"transfer-2":
+  waiting to lock monitor 0x00007f9bd31705d0 (object 0x0000000787f9ce00, a edu.itc.se.lab01.task5.Bank$Account),
+  which is held by "transfer-1"
+
+Java stack information for the threads listed above:
+===================================================
+"transfer-0":
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:34)
+	- waiting to lock <0x0000000787f9ce00> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+"transfer-1":
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:35)
+	- waiting to lock <0x0000000787f9ce30> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x0000000787f9ce00> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+"transfer-2":
+	at edu.itc.se.lab01.task5.Bank.transfer(Bank.java:35)
+	- waiting to lock <0x0000000787f9ce00> (a edu.itc.se.lab01.task5.Bank$Account)
+	- locked <0x0000000787f9ce30> (a edu.itc.se.lab01.task5.Bank$Account)
+	at edu.itc.se.lab01.task5.Bank.lambda$main$1(Bank.java:103)
+	at edu.itc.se.lab01.task5.Bank$$Lambda/0x0000000142389800.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+Found 1 deadlock.
+
