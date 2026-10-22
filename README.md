@@ -1,7 +1,6 @@
 # Lab01 – Multithreading in Java
 
-This repository contains my Java Multithreading lab exercises for the Software Engineering course at the Institute of Technology of Cambodia (ITC).
-
+This repository contains my Java Multithreading lab exercises for the Software Engineering course in semester1 of GIC year 4.
 ### 1. Java Threads
 
 Learn how to create and execute threads, understand thread states, and observe concurrent program execution.
